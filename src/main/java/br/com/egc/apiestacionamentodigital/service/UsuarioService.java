@@ -47,6 +47,7 @@ public class UsuarioService {
 
                 String json = new ObjectMapper().writeValueAsString(emailDto);
 
+                log.info("Enviando email para o usuario cadastrado");
                 rabbitTemplate.convertAndSend("email", json);
 
             } catch (DataIntegrityViolationException | JsonProcessingException e) {
