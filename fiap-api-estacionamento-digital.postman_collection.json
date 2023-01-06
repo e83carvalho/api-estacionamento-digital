@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "41d39505-e76a-425b-a5ef-ef3b9e7c33db",
+		"name": "fiap-api-estacionamento-digital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "buscarUsuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"TIM DUNCAN\",\n    \"cpfCnpj\":\"637.984.330-21\",\n    \"email\":\"tim_duncan@test.com\",\n    \"senha\":\"kZ^QKTkux3#l\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarUsuario",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"TIN DUNCAN ALTERADO\",\n    \"senha\":\"senhaAlterada\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/78eed36b-40ef-4604-8b46-8b4e7e7f9661",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"78eed36b-40ef-4604-8b46-8b4e7e7f9661"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionarVeiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"placa\":\"GFA-2342\",\r\n    \"modelo\":\"Fiat\",\r\n    \"favorito\":false,\r\n    \"tipoVeiculo\":\"CARRO\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/78eed36b-40ef-4604-8b46-8b4e7e7f9661/veiculos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"78eed36b-40ef-4604-8b46-8b4e7e7f9661",
+						"veiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarVeiculo",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"placa\":\"GFA-2342\",\n    \"modelo\":\"Fiat\",\n    \"favorito\":false,\n    \"tipoVeiculo\":\"CARRO\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/78eed36b-40ef-4604-8b46-8b4e7e7f9661/veiculos/85773cbb-14bc-4a1b-acc0-27db6d618a07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"78eed36b-40ef-4604-8b46-8b4e7e7f9661",
+						"veiculos",
+						"85773cbb-14bc-4a1b-acc0-27db6d618a07"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
