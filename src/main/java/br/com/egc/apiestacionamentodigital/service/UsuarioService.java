@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,9 @@ public class UsuarioService {
     private VeiculoService veiculoService;
     @Autowired
     private RabbitTemplate rabbitTemplate;
+
+    @Value("${queue.email}")
+    private String queueEmail;
 
     public void save(Usuario usuario) throws Exception {
 
@@ -48,7 +52,7 @@ public class UsuarioService {
                 String json = new ObjectMapper().writeValueAsString(emailDto);
 
                 log.info("Enviando email para o usuario cadastrado");
-                rabbitTemplate.convertAndSend("email", json);
+                rabbitTemplate.convertAndSend(queueEmail, json);
 
             } catch (DataIntegrityViolationException | JsonProcessingException e) {
                 log.error("Erro ao salvar usuario");
