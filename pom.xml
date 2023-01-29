@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>br.com.fiap</groupId>
 	<artifactId>api-estacionamento-digital</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>api-estacionamento-digital</name>
 	<description>Projeto para o trabalho da fase 1 do curso de mba full stack da fiap</description>
 	<properties>
