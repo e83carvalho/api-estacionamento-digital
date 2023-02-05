@@ -1,0 +1,36 @@
+﻿kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: configmap-api-estacionamento-digital
+  namespace: e83carvalho
+  selfLink: >-
+    /api/v1/namespaces/e83carvalho/configmaps/configmap-api-estacionamento-digital
+  uid: 10884ba2-c5a0-459d-b38b-1116ab82fdc6
+  resourceVersion: '241878303'
+  creationTimestamp: '2023-01-29T16:17:22Z'
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2023-01-29T16:17:22Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data':
+          'f:SPRING_RABBITMQ_HOST': {}
+          .: {}
+          'f:SPRING.DATASOURCE.USERNAME': {}
+          'f:SPRING.DATASOURCE.URL': {}
+          'f:SPRING.DATASOURCE.PASSWORD': {}
+          'f:SPRING_RABBITMQ_USERNAME': {}
+          'f:SPRING.PROFILES.ACTIVE': {}
+          'f:SPRING_RABBITMQ_PASSWORD': {}
+          'f:SPRING_RABBITMQ_VIRTUAL_HOST': {}
+data:
+  SPRING.DATASOURCE.PASSWORD: colocar o valor aqui
+  SPRING.DATASOURCE.URL: colocar o valor aqui
+  SPRING.DATASOURCE.USERNAME: colocar o valor aqui
+  SPRING.PROFILES.ACTIVE: openshift
+  SPRING_RABBITMQ_HOST: colocar o valor aqui
+  SPRING_RABBITMQ_PASSWORD: colocar o valor aqui
+  SPRING_RABBITMQ_USERNAME: colocar o valor aqui
+  SPRING_RABBITMQ_VIRTUAL_HOST: colocar o valor aqui
